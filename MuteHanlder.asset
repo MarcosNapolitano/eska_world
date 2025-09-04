@@ -1,0 +1,277 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
+  m_Name: MuteHanlder
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: dc18fd467d16fbe4b8842d9180495d5e,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    \r\n    __Boolean_0: %SystemBoolean, null\r\n   
+    __instance_0: %VRCSDKBaseVRCPlayerApi, null\r\n    onPlayerTriggerEnterPlayer:
+    %VRCSDKBaseVRCPlayerApi, null\r\n    __Boolean_1: %SystemBoolean, null\r\n   
+    __Single_0: %SystemSingle, null\r\n    __Single_1: %SystemSingle, null\r\n   
+    __instance_1: %VRCSDKBaseVRCPlayerApi, null\r\n    __instance_2: %VRCSDKBaseVRCPlayerApi,
+    null\r\n    __far_0: %SystemSingle, null\r\n    __instance_3: %VRCUdonUdonBehaviour,
+    this\r\n    __target_0: %VRCUdonCommonInterfacesNetworkEventTarget, null\r\n   
+    __eventName_0: %SystemString, null\r\n    __instance_4: %UnityEngineGameObject,
+    this\r\n    __type_0: %SystemString, null\r\n    __GameObject_0: %UnityEngineGameObject,
+    this\r\n    __String_0: %SystemString, null\r\n    __instance_5: %VRCSDKBaseVRCPlayerApi,
+    null\r\n    __far_1: %SystemSingle, null\r\n    __instance_6: %VRCUdonUdonBehaviour,
+    this\r\n    __target_1: %VRCUdonCommonInterfacesNetworkEventTarget, null\r\n   
+    __eventName_1: %SystemString, null\r\n    __instance_7: %UnityEngineGameObject,
+    this\r\n    __type_1: %SystemString, null\r\n    __GameObject_1: %UnityEngineGameObject,
+    this\r\n    __String_1: %SystemString, null\r\n    __instance_8: %VRCSDKBaseVRCPlayerApi,
+    null\r\n    __far_2: %SystemSingle, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n   
+    .export _onPlayerTriggerEnter\r\n    \r\n    _onPlayerTriggerEnter:\r\n    \r\n       
+    PUSH, onPlayerTriggerEnterPlayer\r\n        PUSH, __instance_0\r\n        COPY\r\n       
+    PUSH, __instance_0\r\n        PUSH, __Boolean_0\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__get_isLocal__SystemBoolean\"\r\n       
+    PUSH, __Boolean_0\r\n        JUMP_IF_FALSE, 0x000001D0\r\n        PUSH, onPlayerTriggerEnterPlayer\r\n       
+    PUSH, __instance_1\r\n        COPY\r\n        PUSH, __instance_1\r\n        PUSH,
+    __Single_0\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__GetVoiceDistanceFar__SystemSingle\"\r\n       
+    PUSH, __Single_0\r\n        PUSH, __Single_1\r\n        PUSH, __Boolean_1\r\n       
+    EXTERN, \"SystemSingle.__op_LessThan__SystemSingle_SystemSingle__SystemBoolean\"\r\n       
+    PUSH, __Boolean_1\r\n        JUMP_IF_FALSE, 0x00000134\r\n        PUSH, onPlayerTriggerEnterPlayer\r\n       
+    PUSH, __instance_2\r\n        COPY\r\n        PUSH, __instance_2\r\n        PUSH,
+    __far_0\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__SetVoiceDistanceFar__SystemSingle__SystemVoid\"\r\n       
+    PUSH, __GameObject_0\r\n        PUSH, __instance_4\r\n        COPY\r\n       
+    PUSH, __instance_4\r\n        PUSH, __type_0\r\n        PUSH, __instance_3\r\n       
+    EXTERN, \"UnityEngineGameObject.__GetComponent__SystemString__UnityEngineComponent\"\r\n       
+    PUSH, __String_0\r\n        PUSH, __eventName_0\r\n        COPY\r\n        PUSH,
+    __instance_3\r\n        PUSH, __target_0\r\n        PUSH, __eventName_0\r\n       
+    EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n       
+    JUMP, 0x000001C8\r\n        PUSH, onPlayerTriggerEnterPlayer\r\n        PUSH,
+    __instance_5\r\n        COPY\r\n        PUSH, __instance_5\r\n        PUSH, __far_1\r\n       
+    EXTERN, \"VRCSDKBaseVRCPlayerApi.__SetVoiceDistanceFar__SystemSingle__SystemVoid\"\r\n       
+    PUSH, __GameObject_1\r\n        PUSH, __instance_7\r\n        COPY\r\n       
+    PUSH, __instance_7\r\n        PUSH, __type_1\r\n        PUSH, __instance_6\r\n       
+    EXTERN, \"UnityEngineGameObject.__GetComponent__SystemString__UnityEngineComponent\"\r\n       
+    PUSH, __String_1\r\n        PUSH, __eventName_1\r\n        COPY\r\n        PUSH,
+    __instance_6\r\n        PUSH, __target_1\r\n        PUSH, __eventName_1\r\n       
+    EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n       
+    JUMP, 0x000001D0\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n    .export MuteMe\r\n   
+    \r\n    MuteMe:\r\n    \r\n        PUSH, onPlayerTriggerEnterPlayer\r\n       
+    PUSH, __instance_8\r\n        COPY\r\n        PUSH, __instance_8\r\n        PUSH,
+    __far_2\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__SetVoiceDistanceFar__SystemSingle__SystemVoid\"\r\n       
+    JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  assemblyError: 
+  graphData:
+    name: 
+    description: 
+    nodes:
+    - fullName: Event_OnPlayerTriggerEnter
+      uid: e23b6edb-de88-4e9b-a231-2d65c5f8085b
+      position: {x: 82.36001, y: 240}
+      nodeUIDs: []
+      flowUIDs:
+      - 2874132a-896f-42f9-b617-2f223c2a2660
+      nodeValues: []
+    - fullName: VRCSDKBaseVRCPlayerApi.__SetVoiceDistanceFar__SystemSingle__SystemVoid
+      uid: 4fd9d037-4534-4bee-9913-b1fb87dde88d
+      position: {x: 1087, y: 152}
+      nodeUIDs:
+      - e23b6edb-de88-4e9b-a231-2d65c5f8085b|0
+      - 
+      flowUIDs:
+      - 0e98a055-a47a-4557-a755-c05f1f6569b9
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|25
+    - fullName: Branch
+      uid: 3ac028c9-d7d7-416d-aebf-078536c0621c
+      position: {x: 835, y: 240}
+      nodeUIDs:
+      - 06d7b995-0ace-4033-ad12-e11f8211cfc7|0
+      flowUIDs:
+      - 4fd9d037-4534-4bee-9913-b1fb87dde88d
+      - c887a495-31cc-4d28-9284-5c31ad1f1553
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+    - fullName: VRCSDKBaseVRCPlayerApi.__GetVoiceDistanceFar__SystemSingle
+      uid: e57d22fc-b401-4d78-aeb6-1b0bb3a8ac14
+      position: {x: 460, y: 432}
+      nodeUIDs:
+      - e23b6edb-de88-4e9b-a231-2d65c5f8085b|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: SystemSingle.__op_LessThan__SystemSingle_SystemSingle__SystemBoolean
+      uid: 06d7b995-0ace-4033-ad12-e11f8211cfc7
+      position: {x: 716, y: 490}
+      nodeUIDs:
+      - e57d22fc-b401-4d78-aeb6-1b0bb3a8ac14|0
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|25
+    - fullName: VRCSDKBaseVRCPlayerApi.__SetVoiceDistanceFar__SystemSingle__SystemVoid
+      uid: c887a495-31cc-4d28-9284-5c31ad1f1553
+      position: {x: 1040.1301, y: 382.00006}
+      nodeUIDs:
+      - e23b6edb-de88-4e9b-a231-2d65c5f8085b|0
+      - 
+      flowUIDs:
+      - d16d6870-87c8-485c-88c3-94f417af0687
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|2
+    - fullName: Branch
+      uid: 2874132a-896f-42f9-b617-2f223c2a2660
+      position: {x: 460.00003, y: 240}
+      nodeUIDs:
+      - c6b33ea0-489f-49e4-8aae-1731b3ae4c48|0
+      flowUIDs:
+      - 3ac028c9-d7d7-416d-aebf-078536c0621c
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+    - fullName: VRCSDKBaseVRCPlayerApi.__get_isLocal__SystemBoolean
+      uid: c6b33ea0-489f-49e4-8aae-1731b3ae4c48
+      position: {x: 610.995, y: 80.67249}
+      nodeUIDs:
+      - e23b6edb-de88-4e9b-a231-2d65c5f8085b|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid
+      uid: 0e98a055-a47a-4557-a755-c05f1f6569b9
+      position: {x: 1113.2001, y: -79.35001}
+      nodeUIDs:
+      - 94a7dbc0-5a98-4c8b-b4ab-a2d2292c381d|0
+      - 
+      - 6bb9ec24-ba91-4a9b-8916-d805ee57584c|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: VRC.Udon.Common.Interfaces.NetworkEventTarget, VRC.Udon.Common,
+          Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|All
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Const_SystemString
+      uid: 6bb9ec24-ba91-4a9b-8916-d805ee57584c
+      position: {x: 1362.7501, y: 557.75006}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|
+    - fullName: Const_This
+      uid: bc3de823-f7df-4533-a449-5f5981617a5c
+      position: {x: 1378.8501, y: 138.00002}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: UnityEngineGameObject.__GetComponent__SystemString__UnityEngineComponent
+      uid: 94a7dbc0-5a98-4c8b-b4ab-a2d2292c381d
+      position: {x: 1500.7501, y: 205.85}
+      nodeUIDs:
+      - bc3de823-f7df-4533-a449-5f5981617a5c|0
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Const_This
+      uid: 155c6520-ea28-48e6-8338-671e3e9c6e8c
+      position: {x: 1080.1125, y: 512.555}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: UnityEngineGameObject.__GetComponent__SystemString__UnityEngineComponent
+      uid: 36efecd0-03aa-44ee-8e9c-6fbf1a111d99
+      position: {x: 1272.1127, y: 566.555}
+      nodeUIDs:
+      - 155c6520-ea28-48e6-8338-671e3e9c6e8c|0
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Udon
+          Behaviour
+    - fullName: Const_SystemString
+      uid: 2f683571-edfb-4bc5-a3b7-069b294f9e95
+      position: {x: 1272.1127, y: 857.555}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|MuteMe
+    - fullName: VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid
+      uid: d16d6870-87c8-485c-88c3-94f417af0687
+      position: {x: 1578.1125, y: 662.555}
+      nodeUIDs:
+      - 36efecd0-03aa-44ee-8e9c-6fbf1a111d99|0
+      - 
+      - 2f683571-edfb-4bc5-a3b7-069b294f9e95|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: VRC.Udon.Common.Interfaces.NetworkEventTarget, VRC.Udon.Common,
+          Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|All
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Event_Custom
+      uid: 4b752154-5ac0-4ca0-aff8-92d3951b2736
+      position: {x: 1.1511993, y: 1025.0697}
+      nodeUIDs:
+      - 
+      - 
+      flowUIDs:
+      - 09896dcb-7969-40c7-9156-7850a436ff67
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|MuteMe
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
+    - fullName: VRCSDKBaseVRCPlayerApi.__SetVoiceDistanceFar__SystemSingle__SystemVoid
+      uid: 09896dcb-7969-40c7-9156-7850a436ff67
+      position: {x: 385.15112, y: 1025.0697}
+      nodeUIDs:
+      - e23b6edb-de88-4e9b-a231-2d65c5f8085b|0
+      - 
+      flowUIDs:
+      - 
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|2
+    updateOrder: 0
+  graphElementData: []
+  version: 1.0.0
+  showAssembly: 0
